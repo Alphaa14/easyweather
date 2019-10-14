@@ -14,7 +14,7 @@ pipeline {
         {
             steps{
                 sh '''gradle --version'''
-                sh '''./gradlew build clean'''
+                sh '''./gradlew build clean --stacktrace'''
                 echo "The build stage passed..."
             }
         }
