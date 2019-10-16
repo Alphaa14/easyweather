@@ -16,7 +16,7 @@ pipeline {
             steps{
                 sh '''gradle --version'''
                 // sh '''./gradlew build clean --stacktrace'''
-                sh './gradlew clean test --no-daemon' //run a gradle task
+                sh './gradlew clean' //run a gradle task
                 echo "The build stage passed..."
             }
         }
