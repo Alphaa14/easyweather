@@ -3,7 +3,6 @@ pipeline {
         label 'docker'
     } 
     environment {
-        ANDROID_SDK_ROOT = tool name: 'androidSdk'
         ANDROID_HOME = tool name: 'androidSdk'
     }
     tools {
