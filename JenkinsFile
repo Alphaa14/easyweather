@@ -6,7 +6,7 @@ pipeline {
         ANDROID_HOME = tool name: 'androidSdk'
     }
     tools {
-       gradle "562"
+       gradle "gradle562"
    }
     stages
     {
