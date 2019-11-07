@@ -3,7 +3,7 @@ pipeline {
         label 'docker'
     } 
     environment {
-        ANDROID_HOME = tool name: 'androidSdk'
+        ANDROID_SDK_ROOT = tool name: 'androidSdk'
     }
     tools {
        gradle "gradle562"
