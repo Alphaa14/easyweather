@@ -32,7 +32,7 @@ pipeline {
                     tasks 'clean assembleRelease'
                 }
                 echo "Signing APK"
-                withCredentials([certificate(aliasVariable: 'MulticertCertificate', credentialsId: 'certificate_P12_ID', keystoreVariable: 'certificate_KeySource', passwordVariable: 'certificate_Password')]) {
+                withCredentials([certificate(aliasVariable: 'MulticertCertificate', credentialsId: 'certificate_P12_ID', keystoreVariable: 'certificate_content', passwordVariable: 'certificate_password')]) {
                     signAndroidApks (
                         keyStoreId: "myApp.signerKeyStore",
                         keyAlias: "myTeam",
