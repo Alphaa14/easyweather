@@ -27,7 +27,7 @@ pipeline {
         stage("ASSEMBLE") {
             steps{
                 echo "Assemble"
-                sh './gradlew clean assemble' //run a gradle task
+                sh './gradlew assemble' //run a gradle task
 
             }
         }
