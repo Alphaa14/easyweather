@@ -24,13 +24,13 @@ pipeline {
                 echo "The test stage passed..."
             }
         }
-        stage("ASSEMBLE") {
-            steps{
-                echo "Assemble"
-                sh './gradlew assemble' //run a gradle task
+        // stage("ASSEMBLE") {
+        //     steps{
+        //         echo "Assemble"
+        //         sh './gradlew assemble' //run a gradle task
 
-            }
-        }
+        //     }
+        // }
         // stage('Deploy') {
             // steps {
             //   script {                                                        
