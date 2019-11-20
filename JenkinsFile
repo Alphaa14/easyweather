@@ -25,13 +25,22 @@ pipeline {
         }
         stage("test") {
             steps{
+                echo "Gradle Tests..."
+                sh './gradlew tasks'
                 echo "The test stage passed..."
             }
         }    
-        stage('Compile') {
+        // stage('Compile') {
+        //     steps {
+        //       // Compile the app and its dependencies
+        //       sh './gradlew compileDebugSources --stacktrace'
+        //     }
+        // }
+        stage('Static analysis') {
             steps {
-              // Compile the app and its dependencies
-              sh './gradlew compileDebugSources --stacktrace'
+        // Run Lint and analyse the results
+                sh './gradlew lintDebug'
+                androidLint pattern: '**/lint-results-*.xml'
             }
         }
         // stage("ASSEMBLE") {
