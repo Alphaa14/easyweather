@@ -43,6 +43,13 @@ pipeline {
                 androidLint pattern: '**/lint-results-*.xml'
             }
         }
+        stage("BUILD") {
+            steps{
+                echo "Assemble"
+                sh './gradlew build' //run a gradle task
+
+            }
+        }
         // stage("ASSEMBLE") {
         //     steps{
         //         echo "Assemble"
