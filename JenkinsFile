@@ -30,13 +30,6 @@ pipeline {
                 echo "----------------------------------------------"
             }
         }
-        stage("installDebug") {
-            steps{
-                echo "installDebug"
-                sh './gradlew installDebug' //run a gradle task
-
-            }
-        }
         // stage('Compile') {
         //     steps {
         //       // Compile the app and its dependencies
