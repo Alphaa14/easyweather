@@ -23,6 +23,12 @@ pipeline {
             steps{
                 echo "The test stage passed..."
             }
+        }    
+        stage('Compile') {
+            steps {
+              // Compile the app and its dependencies
+              sh './gradlew compileDebugSources'
+            }
         }
         // stage("ASSEMBLE") {
         //     steps{
